@@ -38,4 +38,3 @@ composer require nickklein/kanban
    ```
 
 This will link the `kanban` JSX files to your core Laravel project.
-
