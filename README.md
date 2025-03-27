@@ -23,8 +23,8 @@ composer require nickklein/kanban
 ```
 
 ## Setup
-
-1. Run the migrations:
+1. php artisan vendor:publish to publish the config files to your laravel install
+2. Run the migrations:
    ```sh
    php artisan migrate
    php artisan db:seed
