@@ -19,9 +19,9 @@ class KanbanServiceProvider extends ServiceProvider
             $this->loadRoutesFrom(__DIR__ . '/Routes/auth.php');
         }
 
-        /*$this->commands([*/
-        /*    RunSeederCommand::class,*/
-        /*]);*/
+       $this->commands([
+            RunSeederCommand::class,
+        ]);
         $this->publishes([
             __DIR__.'/../config/kanban.php' => config_path('kanban.php'),
         ], 'kanban-config');
