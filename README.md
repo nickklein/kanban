@@ -1,5 +1,5 @@
 # kanban
-Kanban boards to help with projects or life.
+Kanban boards to help you plan with projects or life.
 
 ## Installation
 
@@ -28,13 +28,14 @@ composer require nickklein/kanban
    ```sh
    php artisan migrate
    php artisan db:seed
+   php artisan run:kanban-seeder
    ```
 
-   ```
-
-3. First check (to make sure it's symlinking to the correct directory), then run the installation script to create a symlink for JSX files:
+3. First check the install.sh to make sure it's symlinking to the correct laravel framework directory, then run the installation script to create a symlink for JSX files:
    ```sh
-   ./install.sh
+   ./install.sh dev or bash install.sh dev
    ```
-
-This will link the `kanban` JSX files to your core Laravel project.
+   ```sh
+   ./install.sh build or bash install.sh build
+   ```
+This will link the `kanban` JSX files to your core Laravel project. The JSX files make some assumptions about your laravel install, such as that you're using regular JSX, and that you have a the authentication layout react component installed through laravel breeze.
