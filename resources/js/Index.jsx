@@ -13,7 +13,20 @@ export default function Index(props) {
         >
             <Head title="Currently Streaming" />
             <div className={"max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8"}>
-                    Hello
+                <div className="flex bg-gray-900 min-h-screen gap-3">
+                    {["To Do", "In Progress", "Done"].map((title, index) => (
+                        <div key={index} className="flex flex-col w-1/3 bg-[#161a1d] rounded-lg p-3">
+                        <h2 className="text-lg font-semibold text-gray-200 mb-4 uppercase">{title}</h2>
+                        <div className="space-y-2">
+                            {[1, 2, 3].map((task) => (
+                            <div key={task} className="bg-[#22272b] hover:bg-[#637684] transition rounded-lg p-4">
+                                <p className="text-gray-300 font-medium">Task {task}</p>
+                            </div>
+                            ))}
+                        </div>
+                        </div>
+                    ))}
+                </div>
             </div>
         </AuthenticatedLayout>
     )
